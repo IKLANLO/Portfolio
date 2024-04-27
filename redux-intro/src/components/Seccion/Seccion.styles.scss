@@ -17,18 +17,24 @@
   text-align: end;
 }
 
+@media screen and (max-width: 400px) {
+  .seccion {
+    min-width: 3.75rem;
+  }
+}
+
 .div1 {
-  width: 20%;
-}
-
-.div2 {
-  width: 25%;
-}
-
-.div3 {
   width: 30%;
 }
 
-.div4 {
+.div2 {
   width: 35%;
+}
+
+.div3 {
+  width: 40%;
+}
+
+.div4 {
+  width: 45%;
 }
