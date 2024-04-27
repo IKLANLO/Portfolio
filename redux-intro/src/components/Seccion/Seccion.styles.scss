@@ -1,0 +1,31 @@
+.seccion {
+  background-color: transparentize($color: lightgray, $amount: 0.4rem);
+  // color: whitesmoke;
+  border: 0.2rem #105385 ridge;
+  border-left-style: none;
+  color: #0a314e;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  width: 30%;
+  height: 6.25rem;
+  margin: 1.25rem 0;
+  padding-right: 3rem;
+  align-content: center;
+  text-align: end;
+}
+
+.div1 {
+  width: 20%;
+}
+
+.div2 {
+  width: 25%;
+}
+
+.div3 {
+  width: 30%;
+}
+
+.div4 {
+  width: 35%;
+}

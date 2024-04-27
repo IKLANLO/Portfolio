@@ -1,13 +1,13 @@
-$first-color: rgba(236, 128, 169, 1);
-$second-color: rgba(234, 161, 108, 1);
-$third-color: rgba(237, 112, 156, 1);
+$first-color: #105385;
+$second-color: #19899a;
+$third-color: #24d1b5;
 
 .fondo-inicial {
   background: linear-gradient(
     22deg,
-    $first-color 17%,
+    $third-color 17%,
     $second-color 97%,
-    $third-color 100%
+    $first-color 100%
   );
   position: fixed;
   top: 0;
