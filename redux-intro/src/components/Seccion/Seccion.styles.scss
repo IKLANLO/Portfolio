@@ -2,39 +2,60 @@
 
 .seccion {
   background-color: transparentize($color: lightgray, $amount: 0.4rem);
-  // color: whitesmoke;
   border: 0.2rem #105385 ridge;
   border-left-style: none;
   color: #0a314e;
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-  width: 30%;
+  width: 50%;
   height: 6.25rem;
   margin: 1.25rem 0;
   padding-right: 3rem;
   align-content: center;
   text-align: end;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 400px) {
-  .seccion {
-    min-width: 3.75rem;
-  }
-}
-
-.div1 {
+.my-atropos1 {
   width: 30%;
 }
 
-.div2 {
+.my-atropos2 {
   width: 35%;
 }
 
-.div3 {
+.my-atropos3 {
   width: 40%;
 }
 
-.div4 {
+.my-atropos4 {
   width: 45%;
+}
+
+@media screen and (max-width: 600px) {
+  .seccion {
+    width: 30%;
+    margin: 0.125rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 1rem;
+  }
+
+  .my-atropos1 {
+    width: 100%;
+  }
+
+  .my-atropos2 {
+    width: 100%;
+  }
+
+  .my-atropos3 {
+    width: 100%;
+  }
+
+  .my-atropos4 {
+    width: 100%;
+  }
 }

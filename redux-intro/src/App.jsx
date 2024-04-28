@@ -8,12 +8,12 @@ function App() {
       <Fondo />
       <div
         style={{
-          marginTop: '7.5%',
+          marginTop: '4%',
         }}>
-        <Seccion titulo={'Sobre mí'} longitud={'div1'} />
-        <Seccion titulo={'Skills'} longitud={'div2'} />
-        <Seccion titulo={'Proyectos'} longitud={'div3'} />
-        <Seccion titulo={'Otros'} longitud={'div4'} />
+        <Seccion titulo={'Sobre mí'} longitud={'my-atropos1'} />
+        <Seccion titulo={'Skills'} longitud={'my-atropos2'} />
+        <Seccion titulo={'Proyectos'} longitud={'my-atropos3'} />
+        <Seccion titulo={'Otros'} longitud={'my-atropos4'} />
       </div>
     </>
   )
