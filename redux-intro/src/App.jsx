@@ -7,7 +7,6 @@ import Skills from './components/Skills/Skills'
 import Proyectos from './components/Proyectos/Proyectos'
 import Otros from './components/Otros/Otros'
 import './App.scss'
-import HomeButton from './components/HomeButton/HomeButton'
 
 function App() {
   const { seccionSelected } = useSelector((state) => state.fondo)
@@ -28,7 +27,6 @@ function App() {
               <Seccion titulo={'Otros'} longitud={'my-atropos4'} />
             </>
           )}
-
           <Routes>
             {/* <Route path="/" element={<HomeButton />} /> */}
             <Route path="/sobremi" element={<Sobremi />} />
