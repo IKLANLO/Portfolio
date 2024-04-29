@@ -1,0 +1,15 @@
+.container-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 0.625rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 6.25rem;
+  margin: 0 1.25rem;
+}
