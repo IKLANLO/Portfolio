@@ -1,12 +1,12 @@
 import HomeButton from '../HomeButton/HomeButton'
 
-const Sobremi = () => {
+const Skills = () => {
   return (
     <>
-      <h1>Sobre mí</h1>
+      <h1>Mis habilidades</h1>
       <HomeButton />
     </>
   )
 }
 
-export default Sobremi
+export default Skills
