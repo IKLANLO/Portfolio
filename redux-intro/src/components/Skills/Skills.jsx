@@ -36,43 +36,43 @@ const Skills = () => {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div className="container-icons">
           <div className="icons">
-            <img src={HTMLIcon} alt="HTMLIcon" />
+            <img className="icons__width" src={HTMLIcon} alt="HTMLIcon" />
             <label>HTML5</label>
           </div>
           <div className="icons">
-            <img src={CSSIcon} alt="CSSIcon" />
+            <img className="icons__width" src={CSSIcon} alt="CSSIcon" />
             <label>CSS3</label>
           </div>
           <div className="icons">
-            <img src={sassIcon} alt="sassIcon" />
+            <img className="icons__width" src={sassIcon} alt="sassIcon" />
             <label>Sass</label>
           </div>
           <div className="icons">
-            <img src={jsIcon} alt="jsIcon" />
+            <img className="icons__width" src={jsIcon} alt="jsIcon" />
             <label>JavaScript</label>
           </div>
           <div className="icons">
-            <img src={nodeIcon} alt="nodeIcon" />
+            <img className="icons__width" src={nodeIcon} alt="nodeIcon" />
             <label>Node.js</label>
           </div>
           <div className="icons">
-            <img src={expressIcon} alt="expressIcon" />
+            <img className="icons__width" src={expressIcon} alt="expressIcon" />
             <label>Express</label>
           </div>
           <div className="icons">
-            <img src={reactIcon} alt="reactIcon" />
+            <img className="icons__width" src={reactIcon} alt="reactIcon" />
             <label>React</label>
           </div>
           <div className="icons">
-            <img src={reduxIcon} alt="reduxIcon" />
+            <img className="icons__width" src={reduxIcon} alt="reduxIcon" />
             <label>Redux</label>
           </div>
           <div className="icons">
-            <img src={mySQLIcon} alt="mySQLIcon" />
+            <img className="icons__width" src={mySQLIcon} alt="mySQLIcon" />
             <label>mySQL</label>
           </div>
           <div className="icons">
-            <img src={mongoDBIcon} alt="mongoDBIcon" />
+            <img className="icons__width" src={mongoDBIcon} alt="mongoDBIcon" />
             <label>MongoDB</label>
           </div>
           <div className="icons">
@@ -84,15 +84,19 @@ const Skills = () => {
             <label>Sequelize</label>
           </div>
           <div className="icons">
-            <img src={mongooseIcon} alt="mongooseIcon" />
+            <img
+              className="icons__width"
+              src={mongooseIcon}
+              alt="mongooseIcon"
+            />
             <label>Mongoose</label>
           </div>
           <div className="icons">
-            <img src={dockerIcon} alt="dockerIcon" />
+            <img className="icons__width" src={dockerIcon} alt="dockerIcon" />
             <label>Docker</label>
           </div>
           <div className="icons">
-            <img src={viteIcon} alt="viteIcon" />
+            <img className="icons__width" src={viteIcon} alt="viteIcon" />
             <label>Vite</label>
           </div>
           <div className="icons">
@@ -108,15 +112,19 @@ const Skills = () => {
             <label>Jasmine</label>
           </div>
           <div className="icons">
-            <img src={gitIcon} alt="gitIcon" />
+            <img className="icons__width" src={gitIcon} alt="gitIcon" />
             <label>Git</label>
           </div>
           <div className="icons">
-            <img src={githubIcon} alt="githubIcon" />
+            <img className="icons__width" src={githubIcon} alt="githubIcon" />
             <label>GitHub</label>
           </div>
           <div className="icons">
-            <img src={bootstrapIcon} alt="bootstrapIcon" />
+            <img
+              className="icons__width"
+              src={bootstrapIcon}
+              alt="bootstrapIcon"
+            />
             <label>Bootstrap</label>
           </div>
           <div className="icons">
