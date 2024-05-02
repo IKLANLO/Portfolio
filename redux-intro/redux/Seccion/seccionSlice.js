@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const anchoPantalla = window.innerWidth
-console.log('ancho', anchoPantalla)
 
 const getInitialWidth = () => {
   return anchoPantalla > 600 ? '50%' : '30%'

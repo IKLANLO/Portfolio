@@ -5,7 +5,7 @@ import Seccion from './components/Seccion/Seccion'
 import Sobremi from './components/Sobremi/Sobremi'
 import Skills from './components/Skills/Skills'
 import Proyectos from './components/Proyectos/Proyectos'
-import Otros from './components/Otros/Otros'
+import Contacto from './components/Contacto/Contacto'
 import './App.scss'
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
               <Seccion titulo={'Sobre mí'} longitud={'my-atropos1'} />
               <Seccion titulo={'Skills'} longitud={'my-atropos2'} />
               <Seccion titulo={'Proyectos'} longitud={'my-atropos3'} />
-              <Seccion titulo={'Otros'} longitud={'my-atropos4'} />
+              <Seccion titulo={'Contacto'} longitud={'my-atropos4'} />
             </>
           )}
           <Routes>
@@ -32,7 +32,7 @@ function App() {
             <Route path="/sobremi" element={<Sobremi />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/proyectos" element={<Proyectos />} />
-            <Route path="/otros" element={<Otros />} />
+            <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </BrowserRouter>
       </div>

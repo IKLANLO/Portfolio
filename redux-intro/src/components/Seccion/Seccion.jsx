@@ -25,8 +25,8 @@ const Seccion = (props) => {
         navigate('/proyectos')
         break
 
-      case 'Otros':
-        navigate('/otros')
+      case 'Contacto':
+        navigate('/contacto')
         break
 
       default:

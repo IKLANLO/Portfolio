@@ -18,17 +18,19 @@ const Sobremi = () => {
         </div>
         <div className="text-container">
           <p className="text-container__p">
-            ¡Hola! Soy Iker, un apasionado del mundo del desarrollo. Desde que
-            descubrí la programación hace ya unos años, me fascinó el poder
-            crear un producto desde cero que pueda ayudar a otros a solucionar
-            problemas específicos.
+            ¡Hola! Soy <b>Iker</b>, un <b>apasionado</b> del mundo del
+            desarrollo. Desde que descubrí la programación hace ya unos años, me
+            fascinó el poder crear un producto desde cero que pueda{' '}
+            <b>ayudar</b> a otros a solucionar problemas específicos.
           </p>
           <p className="text-container__p">
-            Actualmente estoy centrado en el desarrollo web full stack, pudiendo
-            desenvolverme tanto en el backend como en el frontend. El stack que
-            uso generalmente es MongoDB o mySQL + Node.js + Express para la
-            parte del backend, y React + Redux para la parte del frontend,
-            aunque sigo ampliando mis conocimientos con diferentes recursos.
+            Actualmente estoy centrado en el <b>desarrollo web full stack</b>,
+            pudiendo desenvolverme tanto en el <b>backend</b> como en el{' '}
+            <b>frontend</b>. El stack que uso generalmente es <b>MongoDB</b> o{' '}
+            <b>mySQL</b> + <b>Node.js</b> + <b>Express</b> para la parte del
+            backend, y <b>React</b> + <b>Redux</b> para la parte del frontend,
+            aunque sigo <b>ampliando</b> mis conocimientos con diferentes
+            recursos.
           </p>
           <p className="text-container__p">
             Cuando no estoy programando puedes encontrarme haciendo deporte,
