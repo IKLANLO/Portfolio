@@ -28,7 +28,6 @@ function App() {
             </>
           )}
           <Routes>
-            {/* <Route path="/" element={<HomeButton />} /> */}
             <Route path="/sobremi" element={<Sobremi />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/proyectos" element={<Proyectos />} />
