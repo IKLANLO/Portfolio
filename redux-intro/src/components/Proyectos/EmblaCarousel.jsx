@@ -6,6 +6,13 @@ import {
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons'
 
+const socialMedia =
+  'https://drive.google.com/file/d/1ZjTEcPnRXw0rJ5E9J1A_iXyPGqT3TLZt/preview'
+const LANLAB =
+  'https://drive.google.com/file/d/1JJTAGGeZISjFyzUIfE02UN2AMkwTGLU9/preview'
+
+const videos = [socialMedia, LANLAB]
+
 const TWEEN_FACTOR_BASE = 0.5
 
 const EmblaCarousel = (props) => {
@@ -86,14 +93,13 @@ const EmblaCarousel = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {videos.map((video, index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
-                  <img
+                  <iframe
                     className="embla__slide__img embla__parallax__img"
-                    src={`https://picsum.photos/600/350?v=${index}`}
-                    alt="Your alt text"
+                    src={video}
                   />
                 </div>
               </div>
