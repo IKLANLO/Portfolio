@@ -19,7 +19,7 @@ const Proyectos = () => {
         <HomeButton />
       </div>
       <div className="carousel">
-        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        <EmblaCarousel options={OPTIONS} />
         <Footer />
       </div>
     </div>

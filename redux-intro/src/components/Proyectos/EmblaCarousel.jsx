@@ -16,7 +16,7 @@ const videos = [socialMedia, LANLAB]
 const TWEEN_FACTOR_BASE = 0.5
 
 const EmblaCarousel = (props) => {
-  const { slides, options } = props
+  const { options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
