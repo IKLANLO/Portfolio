@@ -1,3 +1,4 @@
+import React from 'react'
 import HomeButton from '../HomeButton/HomeButton'
 import { Link } from 'react-router-dom'
 import '../../components/Contenidos.styles.scss'

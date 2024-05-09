@@ -1,3 +1,4 @@
+import React from 'react'
 import HomeButton from '../HomeButton/HomeButton'
 import '../../components/Contenidos.styles.scss'
 import './Skills.styles.scss'
