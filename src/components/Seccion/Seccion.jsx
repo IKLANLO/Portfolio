@@ -2,8 +2,14 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { cambiarFondo } from '../../../redux/Fondo/FondoSlice'
-import { ocultarSeccion } from '../../../redux/Seccion/seccionSlice'
+import {
+  cambiarFondo,
+  reset as resetFondo,
+} from '../../../redux/Fondo/FondoSlice'
+import {
+  ocultarSeccion,
+  reset as resetSeccion,
+} from '../../../redux/Seccion/seccionSlice'
 import Atropos from 'atropos/react'
 import usuarioIcon from '../../../assets/usuario.png'
 import emailIcon from '../../../assets/email.png'
@@ -24,6 +30,28 @@ const Seccion = (props) => {
 
     return () => {
       window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    const currentLocation = window.location.pathname
+    const handlePopState = () => {
+      console.log(currentLocation)
+      if (currentLocation !== '/' || currentLocation !== '/Portfolio') {
+        console.log('adios')
+        dispatch(resetFondo())
+        dispatch(resetSeccion())
+        navigate('/')
+      } else {
+        console.log('hola')
+        window.history.pushState(null, '', '/Portfolio')
+      }
+    }
+
+    window.addEventListener('popstate', () => handlePopState())
+
+    return () => {
+      window.addEventListener('popstate', () => handlePopState())
     }
   }, [])
 
