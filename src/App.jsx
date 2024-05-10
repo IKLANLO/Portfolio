@@ -19,7 +19,7 @@ function App() {
         style={{
           marginTop: '4%',
         }}>
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           {!seccionSelected && (
             <>
               <Seccion titulo={'Sobre mí'} longitud={'my-atropos1'} />
