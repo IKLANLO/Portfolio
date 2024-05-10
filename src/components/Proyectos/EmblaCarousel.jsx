@@ -1,5 +1,8 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setProyecto } from '../../../redux/Proyecto/proyectoSlice'
 import {
   NextButton,
   PrevButton,
@@ -15,6 +18,14 @@ const ecommerce =
 
 const videos = [LANLAB, socialMedia, ecommerce]
 
+const LANLABRepo = 'https://github.com/IKLANLO/desafioFS_frontend.git'
+const socialMediaRepo =
+  'https://github.com/IKLANLO/proyectoSocialMedia_frontend.git'
+const ecommerceRepo =
+  'https://github.com/olatzgoti/proyectoEcommerceFrontend.git'
+
+const repos = [LANLABRepo, socialMediaRepo, ecommerceRepo]
+
 const TWEEN_FACTOR_BASE = 0.5
 
 const EmblaCarousel = (props) => {
@@ -22,6 +33,24 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const dispatch = useDispatch()
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = (prevIndex + 1) % repos.length
+      dispatch(setProyecto(repos[nextIndex]))
+      return nextIndex
+    })
+  }
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) => {
+      const prevIndexNormalized = (prevIndex - 1 + repos.length) % repos.length
+      dispatch(setProyecto(repos[prevIndexNormalized]))
+      return prevIndexNormalized
+    })
+  }
 
   const {
     prevBtnDisabled,
@@ -112,8 +141,20 @@ const EmblaCarousel = (props) => {
 
       <div className="embla__controls">
         <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <PrevButton
+            onClick={() => {
+              handlePrevious()
+              onPrevButtonClick()
+            }}
+            disabled={prevBtnDisabled}
+          />
+          <NextButton
+            onClick={() => {
+              handleNext()
+              onNextButtonClick()
+            }}
+            disabled={nextBtnDisabled}
+          />
         </div>
       </div>
     </div>

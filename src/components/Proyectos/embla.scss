@@ -28,9 +28,8 @@
   object-fit: cover;
 }
 .embla__controls {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   gap: 1.2rem;
 }
 .embla__buttons {
