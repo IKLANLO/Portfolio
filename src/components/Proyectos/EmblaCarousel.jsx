@@ -10,8 +10,10 @@ const socialMedia =
   'https://drive.google.com/file/d/1ZjTEcPnRXw0rJ5E9J1A_iXyPGqT3TLZt/preview'
 const LANLAB =
   'https://drive.google.com/file/d/1JJTAGGeZISjFyzUIfE02UN2AMkwTGLU9/preview'
+const ecommerce =
+  'https://drive.google.com/file/d/1hqAvAeprQHAU_LvV96fHmwOegQptPXpC/preview'
 
-const videos = [socialMedia, LANLAB]
+const videos = [LANLAB, socialMedia, ecommerce]
 
 const TWEEN_FACTOR_BASE = 0.5
 

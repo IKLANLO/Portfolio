@@ -36,14 +36,11 @@ const Seccion = (props) => {
   useEffect(() => {
     const currentLocation = window.location.pathname
     const handlePopState = () => {
-      console.log(currentLocation)
       if (currentLocation !== '/' || currentLocation !== '/Portfolio') {
-        console.log('adios')
         dispatch(resetFondo())
         dispatch(resetSeccion())
         navigate('/')
       } else {
-        console.log('hola')
         window.history.pushState(null, '', '/Portfolio')
       }
     }
