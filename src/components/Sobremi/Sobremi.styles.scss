@@ -7,8 +7,7 @@
   border-radius: 0.625rem;
 
   &__p {
-    font-size: 1.8em;
-    color: transparentize($color: #000000, $amount: 0.2);
+    color: transparentize($color: #000000, $amount: 0.5);
   }
 }
 

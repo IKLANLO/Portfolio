@@ -1,8 +1,29 @@
+@font-face {
+  font-family: 'Expletus Sans';
+  src: url('./fonts/Expletus_Sans/static/ExpletusSans-Regular.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url('./fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.7em;
+  font-family: 'Expletus Sans';
+  font-size: 0.8em;
+
+  p {
+    font-family: 'Oxygen';
+    font-size: 1.6em;
+  }
+
+  label,
+  button {
+    font-family: 'Oxygen';
+  }
 }
 
 @media screen and (max-width: 400px) {
