@@ -10,6 +10,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import Skeleton from '@mui/material/Skeleton'
 import { videos, repos, TWEEN_FACTOR_BASE } from './data/data'
+import { useSwipeable } from 'react-swipeable'
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props
@@ -113,8 +114,14 @@ const EmblaCarousel = (props) => {
       .on('scroll', tweenParallax)
   }, [emblaApi, tweenParallax])
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrevious,
+    trackMouse: true,
+  })
+
   return (
-    <div className="embla">
+    <div className="embla" {...swipeHandlers}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {videos.map((video, index) => (
