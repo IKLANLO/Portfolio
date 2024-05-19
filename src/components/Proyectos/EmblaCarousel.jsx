@@ -123,7 +123,8 @@ const EmblaCarousel = (props) => {
                 <div className="embla__parallax__layer">
                   {!loaded[index] && (
                     <Skeleton
-                      className="embla__skeleton"
+                      className="embla__slide__img embla__parallax__img embla__skeleton"
+                      // className="embla__skeleton"
                       variant="rectangular"
                     />
                   )}

@@ -1,5 +1,4 @@
 .embla {
-  max-width: 90rem;
   margin: auto;
   padding: 1.25rem;
   --slide-height: 20rem;
@@ -8,12 +7,12 @@
 }
 
 .embla__skeleton {
-  width: 100rem;
   min-height: 20rem;
 }
 
 .embla__viewport {
   overflow: hidden;
+  width: 90vw;
 }
 .embla__container {
   backface-visibility: hidden;
@@ -97,6 +96,14 @@
   }
 
   .embla__skeleton {
+    width: 100%;
+  }
+
+  .embla__viewport {
+    width: 30em;
+  }
+
+  .embla__controls {
     width: 100%;
   }
 }
