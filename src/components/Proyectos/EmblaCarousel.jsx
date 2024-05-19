@@ -147,10 +147,10 @@ const EmblaCarousel = (props) => {
                 <div className="embla__parallax__layer">
                   {!loaded[index] && (
                     <Skeleton
-                      className="embla__slide__img embla__parallax__img"
+                      className="embla__skeleton"
                       variant="rectangular"
-                      width={'100rem'}
-                      height={'20rem'}
+                      // width={'100rem'}
+                      // height={'20rem'}
                     />
                   )}
                   <iframe
