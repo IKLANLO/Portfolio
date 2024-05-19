@@ -1,0 +1,67 @@
+{
+  "hash": "9a72e4a5",
+  "configHash": "4c2e4c41",
+  "lockfileHash": "e64eb3ac",
+  "browserHash": "f97a6067",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f0b2d8e2",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "dc0128c9",
+      "needsInterop": true
+    },
+    "react-redux": {
+      "src": "../../node_modules/react-redux/dist/react-redux.mjs",
+      "file": "react-redux.js",
+      "fileHash": "68b9bc21",
+      "needsInterop": false
+    },
+    "@reduxjs/toolkit": {
+      "src": "../../node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs",
+      "file": "@reduxjs_toolkit.js",
+      "fileHash": "7cb9ec92",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "dc93baae",
+      "needsInterop": false
+    },
+    "atropos/react": {
+      "src": "../../node_modules/atropos/atropos-react.mjs",
+      "file": "atropos_react.js",
+      "fileHash": "689c5f91",
+      "needsInterop": false
+    },
+    "embla-carousel-react": {
+      "src": "../../node_modules/embla-carousel-react/esm/embla-carousel-react.esm.js",
+      "file": "embla-carousel-react.js",
+      "fileHash": "547cd575",
+      "needsInterop": false
+    },
+    "@mui/material/Skeleton": {
+      "src": "../../node_modules/@mui/material/Skeleton/index.js",
+      "file": "@mui_material_Skeleton.js",
+      "fileHash": "f7dca516",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-4ZSTBHIF": {
+      "file": "chunk-4ZSTBHIF.js"
+    },
+    "chunk-HAZNF34R": {
+      "file": "chunk-HAZNF34R.js"
+    },
+    "chunk-WXXH56N5": {
+      "file": "chunk-WXXH56N5.js"
+    }
+  }
+}

@@ -8,6 +8,7 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons'
+import Skeleton from '@mui/material/Skeleton'
 
 const socialMedia =
   'https://drive.google.com/file/d/1ZjTEcPnRXw0rJ5E9J1A_iXyPGqT3TLZt/preview'
@@ -40,7 +41,17 @@ const EmblaCarousel = (props) => {
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [loaded, setLoaded] = useState(new Array(videos.length).fill(false))
+  const iframeRefs = useRef([])
   const dispatch = useDispatch()
+
+  const handleLoaded = (index) => {
+    setLoaded((prevLoaded) => {
+      const newLoaded = [...prevLoaded]
+      newLoaded[index] = true
+      return newLoaded
+    })
+  }
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
@@ -134,9 +145,20 @@ const EmblaCarousel = (props) => {
             <div className="embla__slide" key={index}>
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
+                  {!loaded[index] && (
+                    <Skeleton
+                      className="embla__slide__img embla__parallax__img"
+                      variant="rectangular"
+                      width={'100rem'}
+                      height={'20rem'}
+                    />
+                  )}
                   <iframe
+                    ref={(el) => (iframeRefs.current[index] = el)}
                     className="embla__slide__img embla__parallax__img"
                     src={video}
+                    onLoad={() => handleLoaded(index)}
+                    style={{ display: loaded[index] ? 'block' : 'none' }}
                   />
                 </div>
               </div>
