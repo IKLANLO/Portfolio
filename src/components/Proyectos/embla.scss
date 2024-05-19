@@ -92,7 +92,8 @@
 
 @media screen and (max-width: 600px) {
   .embla {
-    --slide-size: 92%;
+    --slide-size: 94%;
+    padding: 1em;
   }
 
   .embla__skeleton {
@@ -100,7 +101,7 @@
   }
 
   .embla__viewport {
-    width: 30em;
+    max-width: 95%;
   }
 
   .embla__controls {
