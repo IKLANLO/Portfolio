@@ -125,19 +125,16 @@ const EmblaCarousel = (props) => {
     trackMouse: true,
   })
 
-  // const swipeHandlers = useSwipeable({
-  //   onSwipedLeft: handleNext,
-  //   onSwipedRight: handlePrevious,
-  //   preventDefaultTouchmoveEvent: true,
-  //   trackMouse: true,
-  // })
+  const iframeContainerStyle = {
+    pointerEvents: allLoaded ? 'auto' : 'none',
+  }
 
   return (
-    <div className="embla">
-      <div
-        className="embla__viewport"
-        ref={emblaRef}
-        {...(allLoaded ? swipeHandlers : {})}>
+    <div
+      className="embla"
+      {...(allLoaded ? swipeHandlers : {})}
+      style={iframeContainerStyle}>
+      <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {videos.map((video, index) => (
             <div className="embla__slide" key={index}>
@@ -150,11 +147,7 @@ const EmblaCarousel = (props) => {
                     />
                   )}
                   <iframe
-                    onSwipedLeft={() => {
-                      console.log('hola')
-                      handlePrevious()
-                    }}
-                    onSwipedRight={() => handleNext()}
+                    onSwipedLeft={() => console.log('swipe')}
                     ref={(el) => (iframeRefs.current[index] = el)}
                     className="embla__slide__img embla__parallax__img"
                     src={video}
