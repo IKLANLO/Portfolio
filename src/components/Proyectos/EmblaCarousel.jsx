@@ -19,6 +19,7 @@ const EmblaCarousel = (props) => {
   const tweenNodes = useRef([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [loaded, setLoaded] = useState(new Array(videos.length).fill(false))
+  const [allLoaded, setAllLoaded] = useState(false)
   const iframeRefs = useRef([])
   const dispatch = useDispatch()
 
@@ -26,6 +27,9 @@ const EmblaCarousel = (props) => {
     setLoaded((prevLoaded) => {
       const newLoaded = [...prevLoaded]
       newLoaded[index] = true
+      if (newLoaded.every((isLoaded) => isLoaded)) {
+        setAllLoaded(true)
+      }
       return newLoaded
     })
   }
@@ -115,15 +119,25 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenParallax])
 
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNext,
-    onSwipedRight: handlePrevious,
+    onSwipedLeft: allLoaded ? handleNext : {},
+    onSwipedRight: allLoaded ? handlePrevious : {},
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   })
 
+  // const swipeHandlers = useSwipeable({
+  //   onSwipedLeft: handleNext,
+  //   onSwipedRight: handlePrevious,
+  //   preventDefaultTouchmoveEvent: true,
+  //   trackMouse: true,
+  // })
+
   return (
-    <div className="embla" {...swipeHandlers}>
-      <div className="embla__viewport" ref={emblaRef}>
+    <div className="embla">
+      <div
+        className="embla__viewport"
+        ref={emblaRef}
+        {...(allLoaded ? swipeHandlers : {})}>
         <div className="embla__container">
           {videos.map((video, index) => (
             <div className="embla__slide" key={index}>
@@ -132,11 +146,15 @@ const EmblaCarousel = (props) => {
                   {!loaded[index] && (
                     <Skeleton
                       className="embla__slide__img embla__parallax__img embla__skeleton"
-                      // className="embla__skeleton"
                       variant="rectangular"
                     />
                   )}
                   <iframe
+                    onSwipedLeft={() => {
+                      console.log('hola')
+                      handlePrevious()
+                    }}
+                    onSwipedRight={() => handleNext()}
                     ref={(el) => (iframeRefs.current[index] = el)}
                     className="embla__slide__img embla__parallax__img"
                     src={video}
@@ -150,7 +168,9 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
+      <div
+        className="embla__controls"
+        style={{ display: allLoaded ? '' : 'none' }}>
         <div className="embla__buttons">
           <PrevButton
             onClick={() => {
