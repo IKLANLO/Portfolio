@@ -99,11 +99,22 @@ const Seccion = (props) => {
   return (
     <Atropos
       shadow={false}
+      style={{ minWidth: '7.875rem' }}
       className={`${props.longitud}`}
       onClick={() => handleClick(props.titulo)}>
       <div className="seccion">
         {isMobile ? (
-          <img src={handleIcon(props.titulo)} alt="icono" />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              objectFit: 'fill',
+              maxHeight: '95%',
+            }}>
+            <img src={handleIcon(props.titulo)} alt="icono" />
+            <span style={{ fontSize: '0.9375rem' }}>{props.titulo}</span>
+          </div>
         ) : (
           <h1>{props.titulo}</h1>
         )}
