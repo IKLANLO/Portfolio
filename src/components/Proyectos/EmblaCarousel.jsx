@@ -8,7 +8,8 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons'
-import Skeleton from '@mui/material/Skeleton'
+import Stack from '@mui/material/Stack'
+import CircularProgress from '@mui/material/CircularProgress'
 import { videos, repos, TWEEN_FACTOR_BASE } from './data/data'
 import { useSwipeable } from 'react-swipeable'
 
@@ -141,10 +142,12 @@ const EmblaCarousel = (props) => {
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
                   {!loaded[index] && (
-                    <Skeleton
+                    <Stack
                       className="embla__slide__img embla__parallax__img embla__skeleton"
-                      variant="rectangular"
-                    />
+                      spacing={2}
+                      direction="row">
+                      <CircularProgress color="success" />
+                    </Stack>
                   )}
                   <iframe
                     onSwipedLeft={() => console.log('swipe')}
